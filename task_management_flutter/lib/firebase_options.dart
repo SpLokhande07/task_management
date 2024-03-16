@@ -44,40 +44,38 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBwOj1faq4ZkfYlk-5wTPG34mi_mVg3gr4',
-    appId: '1:447373574554:web:f3f5879a51a5b0492ffa23',
-    messagingSenderId: '447373574554',
-    projectId: 'yaadein-c1dbe',
-    authDomain: 'yaadein-c1dbe.firebaseapp.com',
-    storageBucket: 'yaadein-c1dbe.appspot.com',
-    measurementId: 'G-B74CJ4GQ1T',
+    apiKey: 'AIzaSyCWPPFovoevvGiS5Z0fRpavxg_2yPe9oPQ',
+    appId: '1:620234940540:web:cc013ddeea09e654bda9f9',
+    messagingSenderId: '620234940540',
+    projectId: 'yaadein-with-serverpod',
+    authDomain: 'yaadein-with-serverpod.firebaseapp.com',
+    storageBucket: 'yaadein-with-serverpod.appspot.com',
+    measurementId: 'G-DTEX75M31C',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCiqO2bJKyulvbPjltGA8IjF7TnWLujeI0',
-    appId: '1:447373574554:android:2ca22f41d44f04ee2ffa23',
-    messagingSenderId: '447373574554',
-    projectId: 'yaadein-c1dbe',
-    storageBucket: 'yaadein-c1dbe.appspot.com',
+    apiKey: 'AIzaSyBCkYUGGmh03ERvfXOayqbskSWT_sndwDE',
+    appId: '1:620234940540:android:738850d1be70a621bda9f9',
+    messagingSenderId: '620234940540',
+    projectId: 'yaadein-with-serverpod',
+    storageBucket: 'yaadein-with-serverpod.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDSUY2XG3VnFR14uOt2C6515GocRPeWzb4',
-    appId: '1:447373574554:ios:c289aab8bdf686e32ffa23',
-    messagingSenderId: '447373574554',
-    projectId: 'yaadein-c1dbe',
-    storageBucket: 'yaadein-c1dbe.appspot.com',
-    iosClientId: '447373574554-59q7lvn488dbdup5spo79p9lg3n6qhi1.apps.googleusercontent.com',
-    iosBundleId: 'com.sp.ios.todoWithAlarm',
+    apiKey: 'AIzaSyAj1NbNiQIfns2-a3bcY8dUqXtOH810WA4',
+    appId: '1:620234940540:ios:9d3e8586b1072054bda9f9',
+    messagingSenderId: '620234940540',
+    projectId: 'yaadein-with-serverpod',
+    storageBucket: 'yaadein-with-serverpod.appspot.com',
+    iosBundleId: 'com.example.taskManagementFlutter',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyDSUY2XG3VnFR14uOt2C6515GocRPeWzb4',
-    appId: '1:447373574554:ios:2c1da34f2096a6582ffa23',
-    messagingSenderId: '447373574554',
-    projectId: 'yaadein-c1dbe',
-    storageBucket: 'yaadein-c1dbe.appspot.com',
-    iosClientId: '447373574554-asqc09suo144fg07bp3qmv352dgbmo9q.apps.googleusercontent.com',
-    iosBundleId: 'com.sp.macos.todoWithAlarm',
+    apiKey: 'AIzaSyAj1NbNiQIfns2-a3bcY8dUqXtOH810WA4',
+    appId: '1:620234940540:ios:8cd832fc6ca51564bda9f9',
+    messagingSenderId: '620234940540',
+    projectId: 'yaadein-with-serverpod',
+    storageBucket: 'yaadein-with-serverpod.appspot.com',
+    iosBundleId: 'com.example.taskManagementFlutter.RunnerTests',
   );
 }
