@@ -1,0 +1,9 @@
+class: User
+fields:
+  id: String
+  firstName: String
+  lastName: String
+  email: String
+  dob: DateTime
+  contactNo: int
+  photo: ProfilePhotos

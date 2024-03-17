@@ -1,0 +1,9 @@
+class: Event
+fields:
+  date: DateTime
+  type: EventTypes
+  title: String
+  description: String
+  photos: List<Photos>
+  location: Location
+  members: List<User>

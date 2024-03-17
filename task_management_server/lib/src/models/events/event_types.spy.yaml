@@ -1,0 +1,6 @@
+class: EventTypes
+fields:
+  id: int
+  title: String
+  description: String
+  icon: String

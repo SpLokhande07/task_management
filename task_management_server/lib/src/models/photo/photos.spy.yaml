@@ -1,0 +1,4 @@
+class: Photos
+fields:
+  id: String
+  filePath: String

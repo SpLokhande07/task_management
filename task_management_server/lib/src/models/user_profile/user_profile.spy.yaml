@@ -1,0 +1,4 @@
+class: UserProfile
+fields:
+  user: User
+  photos: List<Photos>
