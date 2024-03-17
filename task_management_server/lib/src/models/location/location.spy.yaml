@@ -1,4 +1,5 @@
 class: Location
+table: locations
 fields:
   latitude: double
   longitude: double

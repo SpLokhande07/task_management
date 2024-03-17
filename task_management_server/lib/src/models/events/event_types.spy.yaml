@@ -1,6 +1,6 @@
 class: EventTypes
+table: event_types
 fields:
-  id: int
   title: String
   description: String
   icon: String

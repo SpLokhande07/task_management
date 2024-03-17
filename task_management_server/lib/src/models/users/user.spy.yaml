@@ -1,9 +1,11 @@
 class: User
+table: users
 fields:
-  id: String
+  fId: String
   firstName: String
   lastName: String
   email: String
   dob: DateTime
   contactNo: int
   photo: ProfilePhotos
+  userInfo: module:auth:UserInfo

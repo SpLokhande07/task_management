@@ -1,4 +1,4 @@
 class: ProfilePhotos
+table: profile_photos
 fields:
-  id: String
   filePath: String

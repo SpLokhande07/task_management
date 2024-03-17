@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:task_management_flutter/constants/serverpod.dart';
 import 'package:task_management_flutter/constants/theme.dart';
 import 'package:task_management_flutter/firebase_options.dart';
 import 'package:task_management_flutter/router/router.dart';
@@ -11,6 +12,8 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await initializeServerpodClient();
+
   runApp(const ProviderScope(child: MyApp()));
 }
 

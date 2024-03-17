@@ -1,4 +1,5 @@
 class: UserProfile
+table: user_profile
 fields:
   user: User
   photos: List<Photos>

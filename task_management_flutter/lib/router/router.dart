@@ -28,8 +28,6 @@ GoRouter router(RouterRef ref) {
       if (authState.isLoading || authState.hasError) return null;
       final isAuthenticated = authState.valueOrNull != null;
       try {
-        final goingToLogin = state.fullPath == const LoginRoute().location;
-
         final isSplash = state.fullPath == const SplashRoute().location;
         if (isSplash) {
           return isAuthenticated

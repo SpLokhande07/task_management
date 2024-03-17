@@ -46,6 +46,8 @@ dependencies:
   riverpod_annotation:
   sign_in_button:
   table_calendar:
+  task_management_client:
+    path: ../task_management_client
 
 dev_dependencies:
   build_runner:
@@ -58,6 +60,14 @@ dev_dependencies:
   riverpod_generator:
   riverpod_lint:
   flutter_gen:
+  serverpod_flutter:
+  serverpod_auth_email_flutter:
+  serverpod_auth_shared_flutter: 1.2.5
+  serverpod_auth_google_flutter: 1.2.5
+  serverpod_auth_apple_flutter: 1.2.5
+  serverpod_auth_client:
+  serverpod_client:
+  serverpod_serialization:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

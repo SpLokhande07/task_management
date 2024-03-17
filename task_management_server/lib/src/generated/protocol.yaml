@@ -1,2 +1,4 @@
+event:
+  - createEvent:
 example:
   - hello:

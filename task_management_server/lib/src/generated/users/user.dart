@@ -1,0 +1,622 @@
+/* AUTOMATICALLY GENERATED CODE DO NOT MODIFY */
+/*   To generate run: "serverpod generate"    */
+
+// ignore_for_file: library_private_types_in_public_api
+// ignore_for_file: public_member_api_docs
+// ignore_for_file: implementation_imports
+// ignore_for_file: use_super_parameters
+// ignore_for_file: type_literal_in_constant_pattern
+
+// ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:serverpod/serverpod.dart' as _i1;
+import '../protocol.dart' as _i2;
+import 'package:serverpod_auth_server/module.dart' as _i3;
+import 'package:serverpod_serialization/serverpod_serialization.dart';
+
+abstract class User extends _i1.TableRow {
+  User._({
+    int? id,
+    required this.fId,
+    required this.firstName,
+    required this.lastName,
+    required this.email,
+    required this.dob,
+    required this.contactNo,
+    required this.photo,
+    required this.userInfo,
+  }) : super(id);
+
+  factory User({
+    int? id,
+    required String fId,
+    required String firstName,
+    required String lastName,
+    required String email,
+    required DateTime dob,
+    required int contactNo,
+    required _i2.ProfilePhotos photo,
+    required _i3.UserInfo userInfo,
+  }) = _UserImpl;
+
+  factory User.fromJson(
+    Map<String, dynamic> jsonSerialization,
+    _i1.SerializationManager serializationManager,
+  ) {
+    return User(
+      id: serializationManager.deserialize<int?>(jsonSerialization['id']),
+      fId: serializationManager.deserialize<String>(jsonSerialization['fId']),
+      firstName: serializationManager
+          .deserialize<String>(jsonSerialization['firstName']),
+      lastName: serializationManager
+          .deserialize<String>(jsonSerialization['lastName']),
+      email:
+          serializationManager.deserialize<String>(jsonSerialization['email']),
+      dob: serializationManager.deserialize<DateTime>(jsonSerialization['dob']),
+      contactNo:
+          serializationManager.deserialize<int>(jsonSerialization['contactNo']),
+      photo: serializationManager
+          .deserialize<_i2.ProfilePhotos>(jsonSerialization['photo']),
+      userInfo: serializationManager
+          .deserialize<_i3.UserInfo>(jsonSerialization['userInfo']),
+    );
+  }
+
+  static final t = UserTable();
+
+  static const db = UserRepository._();
+
+  String fId;
+
+  String firstName;
+
+  String lastName;
+
+  String email;
+
+  DateTime dob;
+
+  int contactNo;
+
+  _i2.ProfilePhotos photo;
+
+  _i3.UserInfo userInfo;
+
+  @override
+  _i1.Table get table => t;
+
+  User copyWith({
+    int? id,
+    String? fId,
+    String? firstName,
+    String? lastName,
+    String? email,
+    DateTime? dob,
+    int? contactNo,
+    _i2.ProfilePhotos? photo,
+    _i3.UserInfo? userInfo,
+  });
+  @override
+  Map<String, dynamic> toJson() {
+    return {
+      if (id != null) 'id': id,
+      'fId': fId,
+      'firstName': firstName,
+      'lastName': lastName,
+      'email': email,
+      'dob': dob.toJson(),
+      'contactNo': contactNo,
+      'photo': photo.toJson(),
+      'userInfo': userInfo.toJson(),
+    };
+  }
+
+  @override
+  @Deprecated('Will be removed in 2.0.0')
+  Map<String, dynamic> toJsonForDatabase() {
+    return {
+      'id': id,
+      'fId': fId,
+      'firstName': firstName,
+      'lastName': lastName,
+      'email': email,
+      'dob': dob,
+      'contactNo': contactNo,
+      'photo': photo,
+      'userInfo': userInfo,
+    };
+  }
+
+  @override
+  Map<String, dynamic> allToJson() {
+    return {
+      if (id != null) 'id': id,
+      'fId': fId,
+      'firstName': firstName,
+      'lastName': lastName,
+      'email': email,
+      'dob': dob.toJson(),
+      'contactNo': contactNo,
+      'photo': photo.allToJson(),
+      'userInfo': userInfo.allToJson(),
+    };
+  }
+
+  @override
+  @Deprecated('Will be removed in 2.0.0')
+  void setColumn(
+    String columnName,
+    value,
+  ) {
+    switch (columnName) {
+      case 'id':
+        id = value;
+        return;
+      case 'fId':
+        fId = value;
+        return;
+      case 'firstName':
+        firstName = value;
+        return;
+      case 'lastName':
+        lastName = value;
+        return;
+      case 'email':
+        email = value;
+        return;
+      case 'dob':
+        dob = value;
+        return;
+      case 'contactNo':
+        contactNo = value;
+        return;
+      case 'photo':
+        photo = value;
+        return;
+      case 'userInfo':
+        userInfo = value;
+        return;
+      default:
+        throw UnimplementedError();
+    }
+  }
+
+  @Deprecated('Will be removed in 2.0.0. Use: db.find instead.')
+  static Future<List<User>> find(
+    _i1.Session session, {
+    _i1.WhereExpressionBuilder<UserTable>? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<User>(
+      where: where != null ? where(User.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  @Deprecated('Will be removed in 2.0.0. Use: db.findRow instead.')
+  static Future<User?> findSingleRow(
+    _i1.Session session, {
+    _i1.WhereExpressionBuilder<UserTable>? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<User>(
+      where: where != null ? where(User.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  @Deprecated('Will be removed in 2.0.0. Use: db.findById instead.')
+  static Future<User?> findById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<User>(id);
+  }
+
+  @Deprecated('Will be removed in 2.0.0. Use: db.deleteWhere instead.')
+  static Future<int> delete(
+    _i1.Session session, {
+    required _i1.WhereExpressionBuilder<UserTable> where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<User>(
+      where: where(User.t),
+      transaction: transaction,
+    );
+  }
+
+  @Deprecated('Will be removed in 2.0.0. Use: db.deleteRow instead.')
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    User row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  @Deprecated('Will be removed in 2.0.0. Use: db.update instead.')
+  static Future<bool> update(
+    _i1.Session session,
+    User row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  @Deprecated(
+      'Will be removed in 2.0.0. Use: db.insert instead. Important note: In db.insert, the object you pass in is no longer modified, instead a new copy with the added row is returned which contains the inserted id.')
+  static Future<void> insert(
+    _i1.Session session,
+    User row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  @Deprecated('Will be removed in 2.0.0. Use: db.count instead.')
+  static Future<int> count(
+    _i1.Session session, {
+    _i1.WhereExpressionBuilder<UserTable>? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<User>(
+      where: where != null ? where(User.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static UserInclude include() {
+    return UserInclude._();
+  }
+
+  static UserIncludeList includeList({
+    _i1.WhereExpressionBuilder<UserTable>? where,
+    int? limit,
+    int? offset,
+    _i1.OrderByBuilder<UserTable>? orderBy,
+    bool orderDescending = false,
+    _i1.OrderByListBuilder<UserTable>? orderByList,
+    UserInclude? include,
+  }) {
+    return UserIncludeList._(
+      where: where,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy?.call(User.t),
+      orderDescending: orderDescending,
+      orderByList: orderByList?.call(User.t),
+      include: include,
+    );
+  }
+}
+
+class _Undefined {}
+
+class _UserImpl extends User {
+  _UserImpl({
+    int? id,
+    required String fId,
+    required String firstName,
+    required String lastName,
+    required String email,
+    required DateTime dob,
+    required int contactNo,
+    required _i2.ProfilePhotos photo,
+    required _i3.UserInfo userInfo,
+  }) : super._(
+          id: id,
+          fId: fId,
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          dob: dob,
+          contactNo: contactNo,
+          photo: photo,
+          userInfo: userInfo,
+        );
+
+  @override
+  User copyWith({
+    Object? id = _Undefined,
+    String? fId,
+    String? firstName,
+    String? lastName,
+    String? email,
+    DateTime? dob,
+    int? contactNo,
+    _i2.ProfilePhotos? photo,
+    _i3.UserInfo? userInfo,
+  }) {
+    return User(
+      id: id is int? ? id : this.id,
+      fId: fId ?? this.fId,
+      firstName: firstName ?? this.firstName,
+      lastName: lastName ?? this.lastName,
+      email: email ?? this.email,
+      dob: dob ?? this.dob,
+      contactNo: contactNo ?? this.contactNo,
+      photo: photo ?? this.photo.copyWith(),
+      userInfo: userInfo ?? this.userInfo.copyWith(),
+    );
+  }
+}
+
+class UserTable extends _i1.Table {
+  UserTable({super.tableRelation}) : super(tableName: 'users') {
+    fId = _i1.ColumnString(
+      'fId',
+      this,
+    );
+    firstName = _i1.ColumnString(
+      'firstName',
+      this,
+    );
+    lastName = _i1.ColumnString(
+      'lastName',
+      this,
+    );
+    email = _i1.ColumnString(
+      'email',
+      this,
+    );
+    dob = _i1.ColumnDateTime(
+      'dob',
+      this,
+    );
+    contactNo = _i1.ColumnInt(
+      'contactNo',
+      this,
+    );
+    photo = _i1.ColumnSerializable(
+      'photo',
+      this,
+    );
+    userInfo = _i1.ColumnSerializable(
+      'userInfo',
+      this,
+    );
+  }
+
+  late final _i1.ColumnString fId;
+
+  late final _i1.ColumnString firstName;
+
+  late final _i1.ColumnString lastName;
+
+  late final _i1.ColumnString email;
+
+  late final _i1.ColumnDateTime dob;
+
+  late final _i1.ColumnInt contactNo;
+
+  late final _i1.ColumnSerializable photo;
+
+  late final _i1.ColumnSerializable userInfo;
+
+  @override
+  List<_i1.Column> get columns => [
+        id,
+        fId,
+        firstName,
+        lastName,
+        email,
+        dob,
+        contactNo,
+        photo,
+        userInfo,
+      ];
+}
+
+@Deprecated('Use UserTable.t instead.')
+UserTable tUser = UserTable();
+
+class UserInclude extends _i1.IncludeObject {
+  UserInclude._();
+
+  @override
+  Map<String, _i1.Include?> get includes => {};
+
+  @override
+  _i1.Table get table => User.t;
+}
+
+class UserIncludeList extends _i1.IncludeList {
+  UserIncludeList._({
+    _i1.WhereExpressionBuilder<UserTable>? where,
+    super.limit,
+    super.offset,
+    super.orderBy,
+    super.orderDescending,
+    super.orderByList,
+    super.include,
+  }) {
+    super.where = where?.call(User.t);
+  }
+
+  @override
+  Map<String, _i1.Include?> get includes => include?.includes ?? {};
+
+  @override
+  _i1.Table get table => User.t;
+}
+
+class UserRepository {
+  const UserRepository._();
+
+  Future<List<User>> find(
+    _i1.Session session, {
+    _i1.WhereExpressionBuilder<UserTable>? where,
+    int? limit,
+    int? offset,
+    _i1.OrderByBuilder<UserTable>? orderBy,
+    bool orderDescending = false,
+    _i1.OrderByListBuilder<UserTable>? orderByList,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.dbNext.find<User>(
+      where: where?.call(User.t),
+      orderBy: orderBy?.call(User.t),
+      orderByList: orderByList?.call(User.t),
+      orderDescending: orderDescending,
+      limit: limit,
+      offset: offset,
+      transaction: transaction,
+    );
+  }
+
+  Future<User?> findFirstRow(
+    _i1.Session session, {
+    _i1.WhereExpressionBuilder<UserTable>? where,
+    int? offset,
+    _i1.OrderByBuilder<UserTable>? orderBy,
+    bool orderDescending = false,
+    _i1.OrderByListBuilder<UserTable>? orderByList,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.dbNext.findFirstRow<User>(
+      where: where?.call(User.t),
+      orderBy: orderBy?.call(User.t),
+      orderByList: orderByList?.call(User.t),
+      orderDescending: orderDescending,
+      offset: offset,
+      transaction: transaction,
+    );
+  }
+
+  Future<User?> findById(
+    _i1.Session session,
+    int id, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.dbNext.findById<User>(
+      id,
+      transaction: transaction,
+    );
+  }
+
+  Future<List<User>> insert(
+    _i1.Session session,
+    List<User> rows, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.dbNext.insert<User>(
+      rows,
+      transaction: transaction,
+    );
+  }
+
+  Future<User> insertRow(
+    _i1.Session session,
+    User row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.dbNext.insertRow<User>(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  Future<List<User>> update(
+    _i1.Session session,
+    List<User> rows, {
+    _i1.ColumnSelections<UserTable>? columns,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.dbNext.update<User>(
+      rows,
+      columns: columns?.call(User.t),
+      transaction: transaction,
+    );
+  }
+
+  Future<User> updateRow(
+    _i1.Session session,
+    User row, {
+    _i1.ColumnSelections<UserTable>? columns,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.dbNext.updateRow<User>(
+      row,
+      columns: columns?.call(User.t),
+      transaction: transaction,
+    );
+  }
+
+  Future<List<int>> delete(
+    _i1.Session session,
+    List<User> rows, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.dbNext.delete<User>(
+      rows,
+      transaction: transaction,
+    );
+  }
+
+  Future<int> deleteRow(
+    _i1.Session session,
+    User row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.dbNext.deleteRow<User>(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  Future<List<int>> deleteWhere(
+    _i1.Session session, {
+    required _i1.WhereExpressionBuilder<UserTable> where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.dbNext.deleteWhere<User>(
+      where: where(User.t),
+      transaction: transaction,
+    );
+  }
+
+  Future<int> count(
+    _i1.Session session, {
+    _i1.WhereExpressionBuilder<UserTable>? where,
+    int? limit,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.dbNext.count<User>(
+      where: where?.call(User.t),
+      limit: limit,
+      transaction: transaction,
+    );
+  }
+}

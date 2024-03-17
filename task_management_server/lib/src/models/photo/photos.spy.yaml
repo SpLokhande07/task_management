@@ -1,4 +1,4 @@
 class: Photos
+table: photos
 fields:
-  id: String
   filePath: String

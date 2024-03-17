@@ -1,4 +1,5 @@
 class: Event
+table: events
 fields:
   date: DateTime
   type: EventTypes
