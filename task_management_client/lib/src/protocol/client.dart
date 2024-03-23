@@ -10,7 +10,6 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:serverpod_client/serverpod_client.dart' as _i1;
 import 'dart:async' as _i2;
-import 'package:task_management_client/src/helper/response.dart' as _i3;
 import 'package:task_management_client/src/protocol/events/event.dart' as _i4;
 import 'package:serverpod_auth_client/module.dart' as _i5;
 import 'protocol.dart' as _i6;
@@ -21,13 +20,6 @@ class EndpointEvent extends _i1.EndpointRef {
 
   @override
   String get name => 'event';
-
-  _i2.Future<_i3.Response> createEvent(_i4.Event event) =>
-      caller.callServerEndpoint<_i3.Response>(
-        'event',
-        'createEvent',
-        {'event': event},
-      );
 }
 
 /// {@category Endpoint}

@@ -30,7 +30,7 @@ GoRouter router(RouterRef ref) {
       try {
         final isSplash = state.fullPath == const SplashRoute().location;
         if (isSplash) {
-          return isAuthenticated
+          return !isAuthenticated
               ? const HomeRoute().location
               : const LoginRoute().location;
         }
@@ -41,8 +41,10 @@ GoRouter router(RouterRef ref) {
         // if (!isAuthenticated && !goingToLogin) {
         //   return const LoginRoute().location;
         // }
-        final isLoggingIn = state.fullPath == LoginRoute().location;
-        if (isLoggingIn) return isAuthenticated ? HomeRoute().location : null;
+        final isLoggingIn = state.fullPath == const LoginRoute().location;
+        if (isLoggingIn) {
+          return !isAuthenticated ? const HomeRoute().location : null;
+        }
       } catch (e) {
         debugPrint(e.toString());
       }

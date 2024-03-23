@@ -8,6 +8,7 @@ import 'package:task_management_flutter/core/screens/login/modal/auth.dart';
 
 final authStreamProvider = StreamProvider<User?>((ref) {
   return FirebaseAuth.instance.authStateChanges();
+  // return FirebaseAuth.instance.authStateChanges();
 });
 
 var authProvider = StateNotifierProvider<FirebaseAuthPod, UserAuth>(

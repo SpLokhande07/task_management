@@ -67,6 +67,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '620234940540',
     projectId: 'yaadein-with-serverpod',
     storageBucket: 'yaadein-with-serverpod.appspot.com',
+    iosClientId: '620234940540-utgbm5ovgogahr1bpb6eo4qko95tp158.apps.googleusercontent.com',
     iosBundleId: 'com.example.taskManagementFlutter',
   );
 
@@ -76,6 +77,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '620234940540',
     projectId: 'yaadein-with-serverpod',
     storageBucket: 'yaadein-with-serverpod.appspot.com',
+    iosClientId: '620234940540-fv8ban56bsujhs84ul7dg21ng4r5hs5q.apps.googleusercontent.com',
     iosBundleId: 'com.example.taskManagementFlutter.RunnerTests',
   );
 }

@@ -24,11 +24,13 @@ environment:
 dependencies:
   #  cloud_firestore:
   cupertino_icons:
-  firebase_auth:
-  firebase_core:
+  firebase_auth: ^4.17.9
+  firebase_core: ^2.27.1
   firebase_crashlytics:
   firebase_messaging:
   firebase_storage:
+  firebase_ui_auth: ^1.13.1
+  firebase_ui_oauth_google: ^1.3.1
   fl_chart:
   flutter:
     sdk: flutter
@@ -44,6 +46,7 @@ dependencies:
   hooks_riverpod:
   json_annotation:
   riverpod_annotation:
+  serverpod_auth_firebase_flutter: ^1.2.5
   sign_in_button:
   table_calendar:
   task_management_client:

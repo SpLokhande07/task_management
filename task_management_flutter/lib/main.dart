@@ -1,7 +1,11 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_ui_auth/firebase_ui_auth.dart' as firebase;
+import 'package:firebase_ui_oauth_google/firebase_ui_oauth_google.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'package:task_management_flutter/constants/config.dart';
 import 'package:task_management_flutter/constants/serverpod.dart';
 import 'package:task_management_flutter/constants/theme.dart';
 import 'package:task_management_flutter/firebase_options.dart';
@@ -13,6 +17,12 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   await initializeServerpodClient();
+  firebase.FirebaseUIAuth.configureProviders([
+    firebase.PhoneAuthProvider(),
+  ]);
+  firebase.FirebaseUIAuth.configureProviders([
+    GoogleProvider(clientId: googleClientId),
+  ]);
 
   runApp(const ProviderScope(child: MyApp()));
 }

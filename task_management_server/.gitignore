@@ -13,3 +13,5 @@ config/passwords.yaml
 
 /migrations/
 /config/google_client_secret.json
+/config/firebase_service_account_key.json
+
